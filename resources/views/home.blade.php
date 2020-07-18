@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{ __('You are logged in! Go to "Services" to start selling, buying or managing items.') }}
                 </div>
             </div>
         </div>
