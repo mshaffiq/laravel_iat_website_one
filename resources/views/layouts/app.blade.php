@@ -38,16 +38,16 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Sell</a>
-                            <a class="dropdown-item" href="#">Buy</a>
-                            <a class="dropdown-item" href="#">Manage</a>
+                            <a class="dropdown-item" href="/sell">Sell</a>
+                            <a class="dropdown-item" href="/buy">Buy</a>
+                            <a class="dropdown-item" href="/manage">Manage</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Support</a>
+                        <a class="nav-link" href="/support">Support</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link" href="/contact">Contact Us</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">

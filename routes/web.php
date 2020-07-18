@@ -13,9 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () {return view('welcome');});
+Route::get('/contact', function () {return view('contact');});
+Route::get('/support', function () {return view('support');});
+Route::get('/sell', function () {return view('sell');});
+Route::get('/buy', function () {return view('buy');});
+Route::get('/manage', function () {return view('manage');});
 
 Auth::routes();
 
