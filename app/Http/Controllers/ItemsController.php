@@ -39,6 +39,7 @@ class ItemsController extends Controller
         $item->itemCategories = request("itemCategories");
         $item->itemTitle = request("itemTitle");
         $item->itemPrice = request("itemPrice");
+        $item->itemAvailability = "AVAILABLE";
         $item->save();
 
         return redirect("/buy");
@@ -81,9 +82,20 @@ class ItemsController extends Controller
         $item->itemCategories = request("itemCategories");
         $item->itemTitle = request("itemTitle");
         $item->itemPrice = request("itemPrice");
+        $item->itemAvailability = "SOLD";
         $item->save();
 
         return redirect("/manage");
+    }
+
+    public function updateAvailability($id)
+    {
+        $item = Items::find($id);
+
+        $item->itemAvailability = "SOLD";
+        $item->save();
+
+        return redirect("/buy");
     }
 
     /**
@@ -92,9 +104,12 @@ class ItemsController extends Controller
      * @param  \App\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Items $item)
+    public function destroy($id)
     {
-        //
+        $item = Items::find($id);
+        $item->delete();
+
+        return redirect("/manage");
     }
 
 }

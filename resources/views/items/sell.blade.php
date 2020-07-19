@@ -27,7 +27,7 @@
 
         <div class="form-group mr-2 mb-2">
             <label class="sr-only" for="itemTitle">Title</label>
-            <input type="text" class="form-control" id="itemTitle" name="itemTitle" placeholder="DESCRIPTION (Brand - Model - Capacity - Colour)" required>
+            <input type="text" style="width: 375px;" class="form-control" id="itemTitle" name="itemTitle" placeholder="DESCRIPTION (Brand - Model - Capacity - Colour)" required>
         </div>
 
         <div class="input-group mr-2 mb-2">

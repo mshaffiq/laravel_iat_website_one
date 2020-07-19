@@ -18,6 +18,7 @@ class CreateItemsTable extends Migration
             $table->string("itemCategories");
             $table->text("itemTitle");
             $table->integer("itemPrice");
+            $table->string("itemAvailability");
             $table->timestamps();
         });
     }

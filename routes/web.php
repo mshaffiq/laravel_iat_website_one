@@ -25,6 +25,8 @@ Route::post("/sell", "ItemsController@store");
 
 Route::get("/sell", "ItemsController@create");
 
+Route::get("/buy/{id}", "ItemsController@updateAvailability");
+
 Route::get("/buy", function () {
     return view("items.buy", [
         "item" => App\Items::latest("id")->get()
@@ -36,6 +38,7 @@ Route::get("/manage", function () {
     ]);});
 
 Route::get("/manage/{id}/edit", "ItemsController@edit");
+Route::get("/manage/{id}/delete", "ItemsController@destroy");
 Route::put("/manage/{id}", "ItemsController@update");
 
 Auth::routes();

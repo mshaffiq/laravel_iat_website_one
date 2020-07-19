@@ -7,9 +7,14 @@
     <h4 class="list-group-item list-group-item-dark mt-4 mb-4">ITEM LIST</h4>
     </div>
     <ul class="list-group">
-        @foreach ($item as $item)
-        <li class="list-group-item">{{ $item->id }}) {{ $item->itemCategories }} - {{ $item->itemTitle }} - RM{{ $item->itemPrice }}</li>
-        <a class="btn btn-primary mb-2" href="/manage/{{ $item->id }}/edit">EDIT ITEM</a>
+        @foreach ($item as $key => $item)
+        <li class="list-group-item">{{$key+1}}) {{ $item->itemCategories }} - {{ $item->itemTitle }} - RM{{ $item->itemPrice }} - {{ $item->itemAvailability}}</li>
+        <div class="d-flex justify-content-start">
+            <div>
+                <a class="btn btn-primary mb-2" href="/manage/{{ $item->id }}/edit">EDIT ITEM</a>
+                <a class="btn btn-primary mb-2" href="/manage/{{ $item->id }}/delete" onclick="return confirm('Are you sure to delete?')">DELETE ITEM</a>
+            </div>
+        </div>
         @endforeach
     </ul>
 </div>
