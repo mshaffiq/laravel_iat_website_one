@@ -66,6 +66,7 @@ section {
 }
 
 body {
+  padding-top: 40px;
   margin: 0;
   font-family: "Arvo", sans-serif;
   font-size: 0.9rem;

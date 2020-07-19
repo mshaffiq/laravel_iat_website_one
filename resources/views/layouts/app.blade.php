@@ -21,7 +21,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
             @guest
                 <a class="navbar-brand" href="/">JUAL</a>
             @else
