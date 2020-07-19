@@ -42,7 +42,7 @@ class ItemsController extends Controller
         $item->itemAvailability = "AVAILABLE";
         $item->save();
 
-        return redirect("/buy");
+        return redirect("/buy")->with('alert', 'Item has been successfully created!');
     }
 
     /**
@@ -82,10 +82,9 @@ class ItemsController extends Controller
         $item->itemCategories = request("itemCategories");
         $item->itemTitle = request("itemTitle");
         $item->itemPrice = request("itemPrice");
-        $item->itemAvailability = "SOLD";
         $item->save();
 
-        return redirect("/manage");
+        return redirect("/manage")->with('alert', 'Item has been successfully updated!');
     }
 
     public function updateAvailability($id)
@@ -95,7 +94,7 @@ class ItemsController extends Controller
         $item->itemAvailability = "SOLD";
         $item->save();
 
-        return redirect("/buy");
+        return redirect("/buy")->with('alert', 'Thank you for buying! Item has been listed as sold. Please delete the item using Manage service.');
     }
 
     /**
@@ -109,7 +108,7 @@ class ItemsController extends Controller
         $item = Items::find($id);
         $item->delete();
 
-        return redirect("/manage");
+        return redirect("/manage")->with('alert', 'Item has been successfully deleted!');
     }
 
 }

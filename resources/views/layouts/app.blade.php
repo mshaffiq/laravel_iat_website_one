@@ -92,5 +92,15 @@
             @yield('content')
         </main>
     </div>
+    <div class="footer bg-light fixed-bottom">
+        <h6 class="mt-2 mb-2" style="vertical-align: middle">Copyright Ⓒ mShaffiqHussin 2020</h6>
+    </div>
 </body>
+<script>
+    var msg = '{{Session::get('alert')}}';
+    var exist = '{{Session::has('alert')}}';
+    if(exist){
+      alert(msg);
+    }
+</script>
 </html>

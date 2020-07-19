@@ -11,8 +11,12 @@
         <li class="list-group-item">{{$key+1}}) {{ $item->itemCategories }} - {{ $item->itemTitle }} - RM{{ $item->itemPrice }} - {{ $item->itemAvailability}}</li>
         <div class="d-flex justify-content-start">
             <div>
-                <a class="btn btn-primary mb-2" href="/manage/{{ $item->id }}/edit">EDIT ITEM</a>
-                <a class="btn btn-primary mb-2" href="/manage/{{ $item->id }}/delete" onclick="return confirm('Are you sure to delete?')">DELETE ITEM</a>
+                @if ($item->itemAvailability === "AVAILABLE")
+                <a class="btn btn-primary mb-4" href="/manage/{{ $item->id }}/edit">EDIT ITEM</a>
+                <a class="btn btn-primary mb-4" href="/manage/{{ $item->id }}/delete" onclick="return confirm('Are you sure to delete?')">DELETE ITEM</a>
+                @else
+                <a class="btn btn-primary mb-4" href="/manage/{{ $item->id }}/delete" onclick="return confirm('Are you sure to delete?')">DELETE ITEM</a>
+                @endif
             </div>
         </div>
         @endforeach

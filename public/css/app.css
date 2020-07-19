@@ -56,13 +56,18 @@ article,
 aside,
 figcaption,
 figure,
-footer,
 header,
 hgroup,
 main,
 nav,
 section {
   display: block;
+}
+
+.footer {
+  position: fixed;
+  text-align: center;
+
 }
 
 body {

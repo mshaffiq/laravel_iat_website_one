@@ -9,7 +9,9 @@
     <ul class="list-group">
         @foreach ($item as $key => $item)
         <li class="list-group-item">{{$key+1}}) {{ $item->itemCategories }} - {{ $item->itemTitle }} - RM{{ $item->itemPrice }} - {{$item->itemAvailability}}</li>
-        <a class="btn btn-primary mb-2" href="/buy/{{$item->id}}">BUY ITEM</a>
+        @if ($item->itemAvailability === "AVAILABLE")
+        <a class="btn btn-primary mb-4" href="/buy/{{$item->id}}">BUY ITEM</a>
+        @else <br/> @endif
         @endforeach
     </ul>
 </div>
