@@ -25,7 +25,7 @@
             @guest
                 <a class="navbar-brand" href="/">JUAL</a>
             @else
-                <a class="navbar-brand" href="/home">JUAL</a>
+                <a class="navbar-brand" href="/welcome">JUAL</a>
             @endguest
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -38,9 +38,15 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/sell">Sell</a>
-                            <a class="dropdown-item" href="/buy">Buy</a>
-                            <a class="dropdown-item" href="/manage">Manage</a>
+                            @guest
+                                <a class="dropdown-item" href="/login">Sell</a>
+                                <a class="dropdown-item" href="/login">Buy</a>
+                                <a class="dropdown-item" href="/login">Manage</a>
+                            @else
+                                <a class="dropdown-item" href="/sell">Sell</a>
+                                <a class="dropdown-item" href="/buy">Buy</a>
+                                <a class="dropdown-item" href="/manage">Manage</a>
+                            @endguest
                         </div>
                     </li>
                     <li class="nav-item">
