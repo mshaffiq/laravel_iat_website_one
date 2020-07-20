@@ -5532,7 +5532,7 @@ a.badge-dark.focus {
   letter-spacing: 1px;
   padding: 0px;
   margin: 15px;
-  background-color: rgba(128, 128, 128, 0.5);
+  background-color: rgba(128, 128, 128, 0.3);
   border-radius: 0.3rem;
 }
 

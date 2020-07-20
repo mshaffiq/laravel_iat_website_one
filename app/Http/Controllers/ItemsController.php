@@ -35,14 +35,22 @@ class ItemsController extends Controller
      */
     public function store()
     {
+        if (request("itemCategories") === "Choose...") {
+            return redirect("/sell")->with('alert', 'Please choose item categories!');
+    
+        } else {
         $item = new Items();
         $item->itemCategories = request("itemCategories");
         $item->itemTitle = request("itemTitle");
         $item->itemPrice = request("itemPrice");
         $item->itemAvailability = "AVAILABLE";
         $item->save();
-
+        }
+        
         return redirect("/buy")->with('alert', 'Item has been successfully created!');
+
+
+
     }
 
     /**

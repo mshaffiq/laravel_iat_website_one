@@ -2,7 +2,8 @@
 
 @section('content')
 <div class="jumbotron container text-center">
-        <h1>WELCOME TO JUAL.COM.MY!</h1>
+        <h1 style=font-size:48px>JUAL.COM.MY!</h1>
+        <br/>
         <h3>One place to sell, One place to buy.</h3>
         <h3>Everything, secure, and faster!</h3>
 

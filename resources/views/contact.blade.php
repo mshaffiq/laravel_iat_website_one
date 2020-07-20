@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="jumbotron container text-center">
-    <h1>OUR CORPORATE OFFICE</h1>
+    <h1><u>CORPORATE OFFICE</u></h1>
     <br/>
     <h3>Jual Tower</h3>
     <h3>8028 Smoky Hollow Street</h3>
