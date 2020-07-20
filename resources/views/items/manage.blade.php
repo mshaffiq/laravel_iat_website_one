@@ -13,9 +13,9 @@
             <div>
                 @if ($item->itemAvailability === "AVAILABLE")
                 <a class="btn btn-primary mb-4" href="/manage/{{ $item->id }}/edit">EDIT ITEM</a>
-                <a class="btn btn-primary mb-4" href="/manage/{{ $item->id }}/delete" onclick="return confirm('Are you sure to delete?')">DELETE ITEM</a>
+                <a class="btn btn-primary mb-4" href="/manage/{{ $item->id }}/delete" onclick="return confirm('Are you sure to delete? {{ $item->itemTitle }} - RM{{ $item->itemPrice }}')">DELETE ITEM</a>
                 @else
-                <a class="btn btn-primary mb-4" href="/manage/{{ $item->id }}/delete" onclick="return confirm('Are you sure to delete?')">DELETE ITEM</a>
+                <a class="btn btn-primary mb-4" href="/manage/{{ $item->id }}/delete" onclick="return confirm('Are you sure to delete? {{ $item->itemTitle }} - RM{{ $item->itemPrice }}')">DELETE ITEM</a>
                 @endif
             </div>
         </div>

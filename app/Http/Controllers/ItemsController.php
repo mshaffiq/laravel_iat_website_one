@@ -36,7 +36,7 @@ class ItemsController extends Controller
     public function store()
     {
         if (request("itemCategories") === "Choose...") {
-            return redirect("/sell")->with('alert', 'Please choose item categories!');
+            return redirect("/sell")->with('alert', 'Item rejected. Please choose item categories!');
     
         } else {
         $item = new Items();
